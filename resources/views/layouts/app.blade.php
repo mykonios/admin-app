@@ -22,10 +22,9 @@
             <!-- Authentication Links -->
             @guest
                 <!-- nao logado -->
-                <!--
-                    <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                    <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-                -->
+                <!--<li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>-->
+                <!--<li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>-->
+                
             @else
                 <!-- logado -->
                 <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
