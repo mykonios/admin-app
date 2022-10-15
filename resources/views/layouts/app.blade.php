@@ -51,7 +51,7 @@
             <div class="container">
             aooooooooooooooooooooo 11
             @yield('content')
-            aooooooooooooooooooooo 222
+            aooooooooooo 222
             </div>
         </main>
     </div>
