@@ -18,6 +18,7 @@
 <body class="nk-body bg-white npc-default pg-auth" >
     <div class="nk-app-root">
         <div class="nk-main ">
+        
             <!-- Authentication Links -->
             @guest
                 <!-- nao logado -->
@@ -56,6 +57,7 @@
                 <!-- fim do conteúdo -->
                 </div>
             </main>
+
         </div>    
     </div>
 </body>
