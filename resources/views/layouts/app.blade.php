@@ -13,47 +13,50 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashlite19ce.css?ver=3.0.3') }}" rel="stylesheet">
 </head>
-<body>
-
-        <!-- Authentication Links -->
-        @guest
-            <!-- nao logado -->
-            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-        @else
-            <!-- logado -->
-            <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
-            <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
-            <li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
-            <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }} <span class="caret"></span>
-                </a>
-
-
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+<body class="nk-body bg-white npc-default pg-auth" >
+    <div class="nk-app-root">
+        <div class="nk-main ">
+            <!-- Authentication Links -->
+            @guest
+                <!-- nao logado -->
+                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+            @else
+                <!-- logado -->
+                <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                <li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }} <span class="caret"></span>
                     </a>
 
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                </div>
-            </li>
-        @endguest
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
 
-        <main class="py-4">
-            <div class="container">
-            aooooooooooo 11
-            @yield('content')
-            aooooooooooo 222
-            </div>
-        </main>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @endguest
+
+            <main class="py-4">
+                <div class="container">
+                <!-- inicio do conteúdo -->
+                @yield('content')
+                <!-- fim do conteúdo -->
+                </div>
+            </main>
+        </div>    
     </div>
 </body>
 </html>
