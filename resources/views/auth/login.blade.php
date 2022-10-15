@@ -38,7 +38,7 @@
                         <div class="form-group">
                             <div class="form-label-group">
                                 <label class="form-label" for="password">Senha</label>
-                                <a class="link link-primary link-sm" href="auth-reset-v2.html">Recuperar Senha</a>
+                                <a class="link link-primary link-sm" href="{{ route('password.request') }}">Recuperar Senha</a>
                             </div>
                             <div class="form-control-wrap">
                                 <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
@@ -53,9 +53,16 @@
                                     </span>
                                 @enderror                                
                             </div>
+                            <div class="form-label-group">
+                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                <label class="form-label" for="remember">
+                                    {{ __('Remember Me') }}
+                                </label>                                
+                            </div>                            
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-lg btn-primary btn-block">Entrar</button>
+                            <button type="submit" class="btn btn-lg btn-primary btn-block">Entrar</button>
                         </div>
                     </form>
                 </div>
