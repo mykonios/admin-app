@@ -18,11 +18,14 @@
 <body class="nk-body bg-white npc-default pg-auth" >
     <div class="nk-app-root">
         <div class="nk-main ">
+
             <!-- Authentication Links -->
             @guest
                 <!-- nao logado -->
-                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                <!--
+                    <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                    <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                -->
             @else
                 <!-- logado -->
                 <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
@@ -56,6 +59,7 @@
                 <!-- fim do conteúdo -->
                 </div>
             </main>
+
         </div>    
     </div>
 </body>
