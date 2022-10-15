@@ -49,7 +49,7 @@
 
         <main class="py-4">
             <div class="container">
-            aooooooooooooooooooooo 11
+            aooooooooooo 11
             @yield('content')
             aooooooooooo 222
             </div>
