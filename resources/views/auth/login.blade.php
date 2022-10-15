@@ -20,13 +20,19 @@
                             </div>
                         </div>
                     </div>
-                    <form action="https://dashlite.net/demo2/index.html">
+                    <form method="POST" action="{{ route('login') }}">
                         <div class="form-group">
                             <div class="form-label-group">
                                 <label class="form-label" for="default-01">Email</label>
                             </div>
                             <div class="form-control-wrap">
-                                <input type="text" class="form-control form-control-lg" id="default-01" placeholder="Digite seu e-mail">
+                                <input id="email" type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Digite seu e-mail">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror                                
                             </div>
                         </div>
                         <div class="form-group">
@@ -39,7 +45,13 @@
                                     <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                     <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                 </a>
-                                <input type="password" class="form-control form-control-lg" id="password" placeholder="Digite sua senha">
+                                <input id="password" type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Digite sua senha">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror                                
                             </div>
                         </div>
                         <div class="form-group">
