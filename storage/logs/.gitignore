@@ -1,6 +1,2 @@
 *
 !.gitignore
-/vendor
-.env
-/storage/*
-/storage/*
