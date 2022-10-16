@@ -92,13 +92,23 @@ $(document).ready(function()
 {
     $(".passcode-switch").click(function(){
         var type = $('#password').attr('type');
-        console.log(type);
+
         if(type == 'password'){
             console.log('password');
+            $(this).attr('type', 'text');
+            $(".passcode-switch").addClass("is-shown");
+
+            $(".ni-eye").css("display", "block");
+            $(".ni-eye-off").css("display", "none");            
         }else{
             console.log('text');
+            $(this).attr('type', 'password');
+            $(".passcode-switch").addClass("is-hidden");
+
+            $(".ni-eye").css("display", "none");
+            $(".ni-eye-off").css("display", "block");
         }
-        //$( "p" ).addClass( "myClass yourClass" );
+        
     });        
 });
 </script>
