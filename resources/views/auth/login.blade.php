@@ -86,4 +86,11 @@
         </div>
     </div>
 </div>
+<script>
+$(document).ready(function () {
+    $( ".passcode-switch" ).live("click", function() {
+        console.log('teste 1');
+    });    
+});
+</script>
 @endsection
