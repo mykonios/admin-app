@@ -1231,13 +1231,9 @@
 
                 @endguest
 
-                <main class="py-4">
-                    <div class="container">
-                    <!-- inicio do conteúdo -->
-                    @yield('content')
-                    <!-- fim do conteúdo -->
-                    </div>
-                </main>
+                <!-- inicio do conteúdo -->
+                @yield('content')
+                <!-- fim do conteúdo -->
 
                 <div class="nk-footer">
                     <div class="container-fluid">
