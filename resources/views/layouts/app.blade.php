@@ -66,12 +66,12 @@
                         </a>
                         <ul class="nk-menu-sub">
                           <li class="nk-menu-item">
-                            <a href="{{ route('users') }}" class="nk-menu-link">
+                            <a href="{{ route('users.index') }}" class="nk-menu-link">
                               <span class="nk-menu-text">Listagem</span>
                             </a>
                           </li>
                           <li class="nk-menu-item">
-                            <a href="user-list-regular.html" class="nk-menu-link">
+                            <a href="{{ route('roles.index') }}" class="nk-menu-link">
                               <span class="nk-menu-text">Permissões</span>
                             </a>
                           </li>
