@@ -53,9 +53,9 @@
                                     </span>
                                 @enderror                                
                             </div>
-                            <div class="form-label-group">
+                            <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                {{ __('Remember Me') }}
+                                <label class="form-check-label" for="flexCheckChecked">{{ __('Remember Me') }}</label>
                             </div>                            
                         </div>
                         <div class="form-group">
