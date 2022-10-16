@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="nk-content ">
+<div class="nk-content" style="margin-top: 85px;">
     <div class="container-fluid">
         <div class="nk-content-body">
 
