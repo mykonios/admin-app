@@ -91,10 +91,12 @@
 $(document).ready(function()
 {
     $(".passcode-switch").click(function(){
-        var type = $('#identifier').attr('type');
+        var type = $('#password').attr('type');
         console.log(type);
-        if(type){
-        
+        if(type == 'password'){
+            console.log('password');
+        }else{
+            console.log('text');
         }
         //$( "p" ).addClass( "myClass yourClass" );
     });        
