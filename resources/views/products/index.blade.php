@@ -7,7 +7,6 @@
         <div class="nk-content-body">
 
 
-
             <div class="nk-block-head nk-block-head-sm">
                 <div class="nk-block-between">
                     <div class="nk-block-head-content">
@@ -60,7 +59,6 @@
                     </div>
                 </div>
             </div>
-
 
 
             <div class="nk-block">
