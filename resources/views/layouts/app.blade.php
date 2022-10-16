@@ -15,7 +15,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dashlite19ce.css?ver=3.0.3') }}" rel="stylesheet">
 </head>
-<body class="nk-body bg-white npc-default pg-auth" >
+
+@guest
+    <body class="nk-body bg-white npc-default pg-auth" >
+@else
+    <body class="nk-body bg-lighter npc-default has-sidebar ">
+@endguest
+
     <div class="nk-app-root">
         <div class="nk-main ">
 
