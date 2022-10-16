@@ -7,12 +7,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Login | Painel Administrativo - AdminApp') }}</title>
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dashlite19ce.css?ver=3.0.3') }}" rel="stylesheet">
 </head>
 
@@ -1247,5 +1246,5 @@
     <script src="{{ asset('js/scripts19ce.js?ver=3.0.3') }}></script>
     <script src="{{ asset('js/demo-settings19ce.js?ver=3.0.3') }}></script>
     <script src="{{ asset('js/charts/chart-ecommerce19ce.js?ver=3.0.3') }}></script>  
-</body>
+ </body>
 </html>
