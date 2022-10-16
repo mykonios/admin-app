@@ -69,7 +69,7 @@
                     <div class="row">
                         <div class="col-lg-12 margin-tb">
                             <div class="pull-left">
-                                <h2>Products</h2>
+                                <h3 class="nk-block-title page-title">Dashboard</h3>
                             </div>
                             <div class="pull-right">
                                 @can('product-create')
