@@ -27,23 +27,7 @@
                 
             @else
                 <!-- logado -->
-                <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
-                <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
-                <li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
 
-                 {{ Auth::user()->name }}
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>                
-
-
-
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
             <div class="nk-sidebar nk-sidebar-fixed is-light " data-content="sidebarMenu">
               <div class="nk-sidebar-element nk-sidebar-head">
                 <div class="nk-sidebar-brand">
