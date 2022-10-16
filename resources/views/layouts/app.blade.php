@@ -1118,7 +1118,7 @@
                                     <em class="icon ni ni-user-alt"></em>
                                   </div>
                                   <div class="user-info d-none d-xl-block">
-                                    <div class="user-status user-status-unverified">Unverified</div>
+                                    <div class="user-status user-status-unverified">Bem-vindo</div>
                                     <div class="user-name dropdown-indicator">{{ Auth::user()->name }}</div>
                                   </div>
                                 </div>
