@@ -21,6 +21,7 @@
                         </div>
                     </div>
                     <form method="POST" action="{{ route('login') }}">
+                        @csrf
                         <div class="form-group">
                             <div class="form-label-group">
                                 <label class="form-label" for="default-01">Email</label>
@@ -53,9 +54,9 @@
                                     </span>
                                 @enderror                                
                             </div>
-                            <div class="form-check">
+                            <div class="form-check" align="right">
                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                <label class="form-check-label" for="flexCheckChecked">{{ __('Remember Me') }}</label>
+                                <label class="form-check-label" for="flexCheckChecked">{{ __('Lembrar-me') }}</label>
                             </div>                            
                         </div>
                         <div class="form-group">
