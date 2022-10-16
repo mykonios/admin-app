@@ -91,7 +91,12 @@
 $(document).ready(function()
 {
     $(".passcode-switch").click(function(){
-        DoIndicator(true);
+        var type = $('#identifier').attr('type');
+        console.log(type);
+        if(type){
+        
+        }
+        //$( "p" ).addClass( "myClass yourClass" );
     });        
 });
 </script>
