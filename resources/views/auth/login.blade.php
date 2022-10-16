@@ -94,14 +94,12 @@ $(document).ready(function()
         var type = $('#password').attr('type');
 
         if(type == 'password'){
-            console.log('password');
             $('#password').attr('type', 'text');
             $(".passcode-switch").addClass("is-shown");
 
             $(".ni-eye").css("display", "none");
             $(".ni-eye-off").css("display", "block");         
         }else{
-            console.log('text');
             $('#password').attr('type', 'password');
             $(".passcode-switch").addClass("is-hidden");
 
