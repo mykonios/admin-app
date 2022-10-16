@@ -27,7 +27,6 @@
                 </div>
             </div>
 
-
             <div class="nk-block">
                 <div class="row g-gs">
 
