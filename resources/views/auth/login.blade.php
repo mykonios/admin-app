@@ -54,7 +54,7 @@
                                     </span>
                                 @enderror                                
                             </div>
-                            <div class="form-check" align="right">
+                            <div class="form-checkX" align="right">
                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                 <label class="form-check-label" for="flexCheckChecked">{{ __('Lembrar-me') }}</label>
                             </div>                            
@@ -95,18 +95,18 @@ $(document).ready(function()
 
         if(type == 'password'){
             console.log('password');
-            $(this).attr('type', 'text');
+            $('#password').attr('type', 'text');
             $(".passcode-switch").addClass("is-shown");
 
-            $(".ni-eye").css("display", "block");
-            $(".ni-eye-off").css("display", "none");            
+            $(".ni-eye").css("display", "none");
+            $(".ni-eye-off").css("display", "block");         
         }else{
             console.log('text');
-            $(this).attr('type', 'password');
+            $('#password').attr('type', 'password');
             $(".passcode-switch").addClass("is-hidden");
 
-            $(".ni-eye").css("display", "none");
-            $(".ni-eye-off").css("display", "block");
+            $(".ni-eye").css("display", "block");
+            $(".ni-eye-off").css("display", "none");   
         }
         
     });        
