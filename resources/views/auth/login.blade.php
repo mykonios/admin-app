@@ -87,10 +87,11 @@
     </div>
 </div>
 <script type="text/javascript">
-    $(document).ready(function()
-    $( ".passcode-switch" ).live("click", function() {
-        console.log('teste 1');
-    });    
+$(document).ready(function()
+{
+    $(".passcode-switch").click(function(){
+        DoIndicator(true);
+    });        
 });
 </script>
 @endsection
