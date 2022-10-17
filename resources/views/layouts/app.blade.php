@@ -784,7 +784,14 @@
                                                     <em class="icon ni ni-user-alt"></em>
                                                 </div>
                                                 <div class="user-info d-none d-xl-block">
-                                                    <div class="user-status user-status-unverified">Bem-vindo</div>
+                                                    <div class="user-status user-status-unverified">
+                                                    Bem-vindo
+                                                    <br />
+                                                      <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                                        <em class="icon ni ni-signout"></em>
+                                                        <span>Sair</span>
+                                                      </a>
+                                                    </div>
                                                     <div class="user-name dropdown-indicator">{{ Auth::user()->name }}</div>                                                    
                                                 </div>
                                             </div>
