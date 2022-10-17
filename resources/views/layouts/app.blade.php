@@ -13,7 +13,7 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
     <!-- Styles -->
-    <link href="{{ asset('css/dashlite19ce.css?ver=3.0.3') }}" rel="stylesheet">
+    <link href="{{ asset('css/dashlite.css?ver=3.0.3') }}" rel="stylesheet">
 </head>
 
 @guest
@@ -403,9 +403,9 @@
 
         </div>    
     </div>
-    <script src="{{ asset('js/bundle19ce.js?ver=3.0.3') }}></script>
-    <script src="{{ asset('js/scripts19ce.js?ver=3.0.3') }}></script>
-    <script src="{{ asset('js/demo-settings19ce.js?ver=3.0.3') }}></script>
-    <script src="{{ asset('js/charts/chart-ecommerce19ce.js?ver=3.0.3') }}></script> 
+    <script src="{{ asset('js/bundle.js?ver=3.0.3') }}></script>
+    <script src="{{ asset('js/scripts.js?ver=3.0.3') }}></script>
+    <script src="{{ asset('js/demo-settings.js?ver=3.0.3') }}></script>
+    <script src="{{ asset('js/charts/chart-ecommerce.js?ver=3.0.3') }}></script> 
  </body>
 </html>
