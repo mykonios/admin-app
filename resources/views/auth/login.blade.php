@@ -65,10 +65,10 @@
                                             <a class="link link-primary link-sm" href="{{ route('password.request') }}">Recuperar Senha</a>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <span style="cursor: pointer;" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                            <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
                                                 <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
-                                            </span>
+                                            </a>
                                             <input id="password" type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Digite sua senha">
 
                                             @error('password')
@@ -116,33 +116,9 @@
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
-    <script src="https://integracao.space/admin-app/assets/js/bundle.js?ver=3.0.4"></script>
-    <script src="https://integracao.space/admin-app/assets/js/scripts.js?ver=3.0.4"></script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
-    <script type="text/javascript">
-    $(document).ready(function()
-    {
-        $(".passcode-switch").click(function(){
-            var type = $('#password').attr('type');
-            console.log(type);
-            if(type == 'password'){
-                $('#password').attr('type', 'text');
-                $(".passcode-switch").addClass("is-shown");
-
-                $(".ni-eye").css("display", "none");
-                $(".ni-eye-off").css("display", "block");         
-            }else{
-                $('#password').attr('type', 'password');
-                $(".passcode-switch").addClass("is-hidden");
-
-                $(".ni-eye").css("display", "block");
-                $(".ni-eye-off").css("display", "none");   
-            }
-            
-        });        
-    });
-    </script>    
+    <script src="https://integracao.space/admin-app/js/bundle.js?ver=3.0.4"></script>
+    <script src="https://integracao.space/admin-app/js/scripts.js?ver=3.0.4"></script>
+  
     <!-- select region modal -->
     <div class="modal fade" tabindex="-1" role="dialog" id="region">
         <div class="modal-dialog modal-lg" role="document">
