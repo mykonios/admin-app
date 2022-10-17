@@ -18,7 +18,7 @@
                                 <em class="icon ni ni-more-v"></em>
                             </a>
                             <div class="toggle-expand-content" data-content="pageMenu">
-                                @can('product-create')
+                                @can('user-create')
                                     <a class="btn btn-success" href="{{ route('users.create') }}"> Novo Usuário</a>
                                 @endcan
                             </div>
