@@ -12,8 +12,8 @@
     <!-- Page Title  -->
     <title>Login | DashLite Admin Template</title>
     <!-- StyleSheets  -->
-    <link rel="stylesheet" href="https://integracao.space/admin-app/css/dashlite.css?ver=3.0.3">
-    <link id="skin-default" rel="stylesheet" href="https://integracao.space/admin-app/css/theme.css?ver=3.0.3">
+    <link rel="stylesheet" href="https://integracao.space/admin-app/css/dashlite.css?ver=3.0.4">
+    <link id="skin-default" rel="stylesheet" href="https://integracao.space/admin-app/css/theme.css?ver=3.0.4">
 </head>
 
 <body class="nk-body bg-white npc-default pg-auth">
@@ -143,8 +143,8 @@
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
-    <script src="https://integracao.space/admin-app/assets/js/bundle.js?ver=3.0.3"></script>
-    <script src="https://integracao.space/admin-app/assets/js/scripts.js?ver=3.0.3"></script>
+    <script src="https://integracao.space/admin-app/assets/js/bundle.js?ver=3.0.4"></script>
+    <script src="https://integracao.space/admin-app/assets/js/scripts.js?ver=3.0.4"></script>
     <!-- select region modal -->
     <div class="modal fade" tabindex="-1" role="dialog" id="region">
         <div class="modal-dialog modal-lg" role="document">
