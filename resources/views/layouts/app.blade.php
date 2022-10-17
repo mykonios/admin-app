@@ -33,7 +33,7 @@
                         <a href="html/index.html" class="logo-link nk-sidebar-logo">
                             <img class="logo-light logo-img" src="https://integracao.space/admin-app/images/logo.png" srcset="https://integracao.space/admin-app/images/logo2x.png 2x" alt="logo">
                             <img class="logo-dark logo-img" src="https://integracao.space/admin-app/images/logo-dark.png" srcset="https://integracao.space/admin-app/images/logo-dark2x.png 2x" alt="logo-dark">
-                            <img class="logo-small logo-img logo-img-small" src="./images/logo-small.png" srcset="https://integracao.space/admin-app/images/logo-small2x.png 2x" alt="logo-small">
+                            <img class="logo-small logo-img logo-img-small" src="https://integracao.space/admin-app/images/logo-small.png" srcset="https://integracao.space/admin-app/images/logo-small2x.png 2x" alt="logo-small">
                         </a>
                     </div>
                     <div class="nk-menu-trigger me-n2">
