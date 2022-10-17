@@ -39,9 +39,9 @@
 
                         <table class="table table-bordered">
                             <tr>
-                                <th>No</th>
-                                <th>Name</th>
-                                <th width="280px">Action</th>
+                                <th>Cód.</th>
+                                <th>Usuário</th>
+                                <th width="280px">Ação</th>
                             </tr>
                             
                             @foreach ($roles as $key => $role)
@@ -49,13 +49,13 @@
                                 <td>{{ ++$i }}</td>
                                 <td>{{ $role->name }}</td>
                                 <td>
-                                    <a class="btn btn-info" href="{{ route('roles.show',$role->id) }}">Show</a>
+                                    <a class="btn btn-info" href="{{ route('roles.show',$role->id) }}">Visualizar</a>
                                     @can('role-edit')
-                                        <a class="btn btn-primary" href="{{ route('roles.edit',$role->id) }}">Edit</a>
+                                        <a class="btn btn-primary" href="{{ route('roles.edit',$role->id) }}">Editar</a>
                                     @endcan
                                     @can('role-delete')
                                         {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
-                                            {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
+                                            {!! Form::submit('Deletar', ['class' => 'btn btn-danger']) !!}
                                         {!! Form::close() !!}
                                     @endcan
                                 </td>
@@ -69,7 +69,10 @@
         </div>    
     </div>
 @else
-    testeee
+    
+    header("Location: {{ route('home') }}");
+    die();    
+
 @endcan
 {!! $roles->render() !!}
 @endsection

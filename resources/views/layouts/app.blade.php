@@ -1,6 +1,6 @@
 @guest
     header("Location: {{ route('login') }}");
-  die();
+    die();
 @else
  <!DOCTYPE html>
 <html lang="zxx" class="js">
