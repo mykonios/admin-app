@@ -41,7 +41,7 @@
                             <tr>
                                 <th>Cód.</th>
                                 <th>Usuário</th>
-                                <th width="280px">Ação</th>
+                                <th width="330px">Ação</th>
                             </tr>
                             
                             @foreach ($roles as $key => $role)
