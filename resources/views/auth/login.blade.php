@@ -5,6 +5,7 @@
     <base href="../../../">
     <meta charset="utf-8">
     <meta name="author" content="Softnio">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -64,10 +65,10 @@
                                             <a class="link link-primary link-sm" href="{{ route('password.request') }}">Recuperar Senha</a>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <a href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                            <span href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
                                                 <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
-                                            </a>
+                                            </span>
                                             <input id="password" type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Digite sua senha">
 
                                             @error('password')
