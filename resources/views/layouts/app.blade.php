@@ -12,8 +12,8 @@
     <!-- Page Title  -->
     <title>Default Dashboard | DashLite Admin Template</title>
     <!-- StyleSheets  -->
-    <link rel="stylesheet" href="https://integracao.space/admin-app/css/dashlite.css?ver=3.0.3">
-    <link id="skin-default" rel="stylesheet" href="https://integracao.space/admin-app/css/theme.css?ver=3.0.3">
+    <link rel="stylesheet" href="https://integracao.space/admin-app/css/dashlite.css?ver=3.0.4">
+    <link id="skin-default" rel="stylesheet" href="https://integracao.space/admin-app/css/theme.css?ver=3.0.4">
 </head>
 
 <body class="nk-body bg-lighter npc-default has-sidebar ">
