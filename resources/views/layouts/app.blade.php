@@ -1,16 +1,22 @@
-<!DOCTYPE html>
+@guest
+    header("Location: {{ route('login') }}");
+  die();
+@else
+ <!DOCTYPE html>
 <html lang="zxx" class="js">
 
 <head>
-    <base href="../">
+    <base href="../../../">
     <meta charset="utf-8">
     <meta name="author" content="Softnio">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A powerful and conceptual apps base dashboard template that especially build for developers and programmers.">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fav Icon  -->
     <link rel="shortcut icon" href="https://integracao.space/admin-app/images/favicon.png">
     <!-- Page Title  -->
-    <title>Default Dashboard | DashLite Admin Template</title>
+    <title>{{ config('app.name', 'Login | Painel Administrativo - AdminApp') }}</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="https://integracao.space/admin-app/css/dashlite.css?ver=3.0.4">
     <link id="skin-default" rel="stylesheet" href="https://integracao.space/admin-app/css/theme.css?ver=3.0.4">
@@ -1056,3 +1062,4 @@
 </body>
 
 </html>
+@endguest
