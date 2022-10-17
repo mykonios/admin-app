@@ -23,7 +23,7 @@
 </div>-->
 
 
-<div class="nk-content"  style="margin-top: 85px;">
+<div class="nk-content" style="margin-top: 85px;">
     <div class="container-fluid">
         <div class="nk-content-inner">
             <div class="nk-content-body">
