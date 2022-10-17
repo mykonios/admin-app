@@ -65,7 +65,7 @@
                                             <a class="link link-primary link-sm" href="{{ route('password.request') }}">Recuperar Senha</a>
                                         </div>
                                         <div class="form-control-wrap">
-                                            <span href="#" class="form-icon form-icon-right passcode-switch lg" data-target="password">
+                                            <span style="cursor: pointer;" class="form-icon form-icon-right passcode-switch lg" data-target="password">
                                                 <em class="passcode-icon icon-show icon ni ni-eye"></em>
                                                 <em class="passcode-icon icon-hide icon ni ni-eye-off"></em>
                                             </span>
@@ -118,13 +118,14 @@
     <!-- JavaScript -->
     <script src="https://integracao.space/admin-app/assets/js/bundle.js?ver=3.0.4"></script>
     <script src="https://integracao.space/admin-app/assets/js/scripts.js?ver=3.0.4"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
     <script type="text/javascript">
     $(document).ready(function()
     {
         $(".passcode-switch").click(function(){
             var type = $('#password').attr('type');
-
+            console.log(type);
             if(type == 'password'){
                 $('#password').attr('type', 'text');
                 $(".passcode-switch").addClass("is-shown");
