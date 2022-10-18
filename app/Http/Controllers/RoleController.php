@@ -60,8 +60,10 @@ class RoleController extends Controller
             'permission' => 'required',*/
         ]);
     
-        $role = Role::create(['name' => $request->input('name')]);
-        $role->syncPermissions($request->input('permission'));
+        $role = Permission::create(['name' => $request->input('name'), 'guard_name' => 'web']);
+
+        //$role = Permission::create(['name' => $request->input('name')]);
+        //$role->syncPermissions($request->input('permission'));
     
         return redirect()->route('roles.index')
                         ->with('success','Permissão criada com sucesso!');
