@@ -5,7 +5,6 @@
     <div class="container-fluid">
         <div class="nk-content-body">
 
-
             <div class="nk-block-head nk-block-head-sm">
                 <div class="nk-block-between">
                     <div class="nk-block-head-content">
