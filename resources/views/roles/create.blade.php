@@ -45,13 +45,13 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>Name:</strong>
+                                <strong>Nome:</strong>
                                 {!! Form::text('name', null, array('placeholder' => 'Nome','class' => 'form-control')) !!}
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>Permission:</strong>
+                                <strong>Permissão:</strong>
                                 <br/>
                                 @foreach($permission as $value)
                                     <label>{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}
