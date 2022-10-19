@@ -64,6 +64,9 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
+                                            <a href="{{ route('profile.index') }}" class="nk-menu-link"><span class="nk-menu-text">Perfil</span></a>
+                                        </li>                                    
+                                        <li class="nk-menu-item">
                                             <a href="{{ route('roles.index') }}" class="nk-menu-link"><span class="nk-menu-text">Permissões</span></a>
                                         </li>
                                         <li class="nk-menu-item">
