@@ -13,7 +13,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        // 
+        //
+        print"index";
     }
 
     /**
@@ -24,6 +25,7 @@ class ProfileController extends Controller
     public function create()
     {
         //
+        print"create";
     }
 
     /**
@@ -35,6 +37,7 @@ class ProfileController extends Controller
     public function store(Request $request)
     {
         //
+        print"store";
     }
 
     /**
@@ -46,6 +49,7 @@ class ProfileController extends Controller
     public function show($id)
     {
         //
+        print"show";
     }
 
     /**
@@ -57,6 +61,7 @@ class ProfileController extends Controller
     public function edit($id)
     {
         //
+        print"edit";
     }
 
     /**
@@ -69,6 +74,7 @@ class ProfileController extends Controller
     public function update(Request $request, $id)
     {
         //
+        print"update";
     }
 
     /**
@@ -80,5 +86,6 @@ class ProfileController extends Controller
     public function destroy($id)
     {
         //
+        print"destroy";
     }
 }
