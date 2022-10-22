@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Http\Controllers;
+
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -20,7 +22,8 @@ class ProfileController extends Controller
          $this->middleware('permission:role-create', ['only' => ['create','store']]);
          $this->middleware('permission:role-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:role-delete', ['only' => ['destroy']]);
-    }    
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -29,7 +32,7 @@ class ProfileController extends Controller
     public function index(Request $request)
     {
         $roles = Role::orderBy('name','DESC')->paginate(5);
-        return view('roles.index',compact('roles'))
+        return view('profile.index',compact('roles'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
