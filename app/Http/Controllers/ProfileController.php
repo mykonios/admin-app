@@ -1,5 +1,5 @@
 <?php
-
+die('aooooooooooooo');
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
