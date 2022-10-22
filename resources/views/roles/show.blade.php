@@ -34,7 +34,7 @@
 @else
     
     header("Location: {{ route('home') }}");
-    die();    
+    die('');    
 
 @endcan
 
