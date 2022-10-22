@@ -37,5 +37,5 @@
     die();    
 
 @endcan
-{!! $roles->render() !!}
+
 @endsection
