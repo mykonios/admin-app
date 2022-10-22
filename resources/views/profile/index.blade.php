@@ -2,78 +2,77 @@
 
 @section('content')
 
-<div class="nk-content" style="margin-top: 85px;">
-    <div class="container-fluid">
-        <div class="nk-content-body">
+@can('role-edit')
+    <div class="nk-content" style="margin-top: 85px;">
+        <div class="container-fluid">
+            <div class="nk-content-body">
 
 
-            <div class="nk-block-head nk-block-head-sm">
-                <div class="nk-block-between">
-                    <div class="nk-block-head-content">
-                        <h3 class="nk-block-title page-title">Usuários</h3>
-                    </div>
-                    <div class="nk-block-head-content">
-                        <div class="toggle-wrap nk-block-tools-toggle">
-                            <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu">
-                                <em class="icon ni ni-more-v"></em>
-                            </a>
-                            <div class="toggle-expand-content" data-content="pageMenu">
-                                @can('user-create')
-                                    <a class="btn btn-success" href="{{ route('users.create') }}"> Novo Usuário</a>
-                                @endcan
+                <div class="nk-block-head nk-block-head-sm">
+                    <div class="nk-block-between">
+                        <div class="nk-block-head-content">
+                            <h3 class="nk-block-title page-title">Permissões</h3>
+                        </div>
+                        <div class="nk-block-head-content">
+                            <div class="toggle-wrap nk-block-tools-toggle">
+                                <a href="#" class="btn btn-icon btn-trigger toggle-expand me-n1" data-target="pageMenu">
+                                    <em class="icon ni ni-more-v"></em>
+                                </a>
+                                <div class="toggle-expand-content" data-content="pageMenu">
+                                    @can('product-create')
+                                        <a class="btn btn-success" href="{{ route('roles.create') }}"> Nova Permissão</a>
+                                    @endcan
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>        
 
+                <div class="nk-block">
+                    <div class="row g-gs">
 
-            <div class="nk-block">
-                <div class="row g-gs">
+                        @if ($message = Session::get('success'))
+                            <div class="alert alert-success">
+                                <p>{{ $message }}</p>
+                            </div>
+                        @endif
 
-                    @if ($message = Session::get('success'))
-                    <div class="alert alert-success">
-                        <p>{{ $message }}</p>
-                    </div>
-                    @endif
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Cód.</th>
+                                <th>Usuário</th>
+                                <th width="330px">Ação</th>
+                            </tr>
+                            
+                            @foreach ($roles as $key => $role)
+                            <tr>
+                                <td>{{ ++$i }}</td>
+                                <td>{{ $role->name }}</td>
+                                <td>
+                                    <a class="btn btn-info" href="{{ route('roles.show',$role->id) }}">Visualizar</a>
+                                    @can('role-edit')
+                                        <a class="btn btn-primary" href="{{ route('roles.edit',$role->id) }}">Editar</a>
+                                    @endcan
+                                    @can('role-delete')
+                                        {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
+                                            {!! Form::submit('Deletar', ['class' => 'btn btn-danger']) !!}
+                                        {!! Form::close() !!}
+                                    @endcan
+                                </td>
+                            </tr>
+                            @endforeach
+                        </table>
 
-                    <table class="table table-bordered">
-                        <tr>
-                            <th>No</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Roles</th>
-                            <th width="280px">Action</th>
-                        </tr>
-                    @foreach ($data as $key => $user)
-                        <tr>
-                            <td>{{ ++$i }}</td>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
-                            <td>
-                                @if(!empty($user->getRoleNames()))
-                                    @foreach($user->getRoleNames() as $v)
-                                        <label class="badge badge-success">{{ $v }}</label>
-                                    @endforeach
-                                @endif
-                            </td>
-                            <td>
-                                <a class="btn btn-info" href="{{ route('users.show',$user->id) }}">Show</a>
-                                <a class="btn btn-primary" href="{{ route('users.edit',$user->id) }}">Edit</a>
-                                    {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
-                                        {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                                    {!! Form::close() !!}
-                            </td>
-                        </tr>
-                    @endforeach
-                    </table>
+                    </div>        
+                </div>
+            </div>     
+        </div>    
+    </div>
+@else
+    
+    header("Location: {{ route('home') }}");
+    die();    
 
-                </div>        
-            </div>
-        </div>     
-    </div>    
-</div>
-
-{!! $data->render() !!}
-
+@endcan
+{!! $roles->render() !!}
 @endsection
