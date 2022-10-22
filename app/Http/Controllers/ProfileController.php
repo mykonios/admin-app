@@ -26,6 +26,7 @@ class ProfileController extends Controller
     {
         //
         print"create";
+        die();
     }
 
     /**
@@ -38,6 +39,7 @@ class ProfileController extends Controller
     {
         //
         print"store";
+        die();
     }
 
     /**
@@ -50,6 +52,7 @@ class ProfileController extends Controller
     {
         //
         print"show";
+        die();
     }
 
     /**
@@ -62,6 +65,7 @@ class ProfileController extends Controller
     {
         //
         print"edit";
+        die();
     }
 
     /**
@@ -75,6 +79,7 @@ class ProfileController extends Controller
     {
         //
         print"update";
+        die();
     }
 
     /**
@@ -87,5 +92,6 @@ class ProfileController extends Controller
     {
         //
         print"destroy";
+        die();
     }
 }
