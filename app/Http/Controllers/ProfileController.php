@@ -26,11 +26,11 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-        print"index";
-        die();       
+        $roles = Role::orderBy('name','DESC')->paginate(5);
+        return view('roles.index',compact('roles'))
+            ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -42,7 +42,6 @@ class ProfileController extends Controller
     {
         //
         print"create";
-        die();
     }
 
     /**
@@ -55,7 +54,6 @@ class ProfileController extends Controller
     {
         //
         print"store";
-        die();
     }
 
     /**
@@ -68,7 +66,6 @@ class ProfileController extends Controller
     {
         //
         print"show";
-        die();
     }
 
     /**
@@ -81,7 +78,6 @@ class ProfileController extends Controller
     {
         //
         print"edit";
-        die();
     }
 
     /**
@@ -95,7 +91,6 @@ class ProfileController extends Controller
     {
         //
         print"update";
-        die();
     }
 
     /**
@@ -108,6 +103,5 @@ class ProfileController extends Controller
     {
         //
         print"destroy";
-        die();
     }
 }
