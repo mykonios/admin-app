@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+use DB;
 
 class ProfileController extends Controller
 {
@@ -15,6 +19,9 @@ class ProfileController extends Controller
     {
         //
         print"index";
+        $roles = Role::orderBy('name','DESC')->paginate(5);
+        return view('roles.index',compact('roles'))
+            ->with('i', ($request->input('page', 1) - 1) * 5);        
     }
 
     /**
