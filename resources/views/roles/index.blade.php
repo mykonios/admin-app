@@ -118,9 +118,9 @@
                                                         </div>
                                                     </td>
                                                     <td class="tb-tnx-amount is-alt">
-                                                        <div class="tb-tnx-status">
-                                                            <span class="badge badge-dot bg-warning">Status</span>
-                                                        </div>
+                                                        <div class="tb-tnx-status"><span class="badge badge-dot bg-warning">Status</span></div>
+                                                        <div class="tb-tnx-status"><span class="badge badge-dot bg-danger">Cancel</span></div>
+                                                        <div class="tb-tnx-status"><span class="badge badge-dot bg-success">Paid</span></div>
                                                     </td>
                                                     <td class="tb-tnx-action">
                                                         <div class="dropdown">
