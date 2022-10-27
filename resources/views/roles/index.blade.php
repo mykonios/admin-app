@@ -140,7 +140,40 @@
                                                     </td>
                                                 </tr><!-- tb-tnx-item -->
                                             @endforeach
-
+                                            <tr class="tb-tnx-item">
+                                                <td class="tb-tnx-id">
+                                                    <a href="#"><span>4947</span></a>
+                                                </td>
+                                                <td class="tb-tnx-info">
+                                                    <div class="tb-tnx-desc">
+                                                        <span class="title">Enterprize Year Subscription</span>
+                                                    </div>
+                                                    <div class="tb-tnx-date">
+                                                        <span class="date">10-05-2019</span>
+                                                        <span class="date">10-13-2019</span>
+                                                    </div>
+                                                </td>
+                                                <td class="tb-tnx-amount is-alt">
+                                                    <div class="tb-tnx-total">
+                                                        <span class="amount">$599.00</span>
+                                                    </div>
+                                                    <div class="tb-tnx-status">
+                                                        <span class="badge badge-dot bg-warning">Due</span>
+                                                    </div>
+                                                </td>
+                                                <td class="tb-tnx-action">
+                                                    <div class="dropdown">
+                                                        <a class="text-soft dropdown-toggle btn btn-icon btn-trigger" data-bs-toggle="dropdown"><em class="icon ni ni-more-h"></em></a>
+                                                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-xs">
+                                                            <ul class="link-list-plain">
+                                                                <li><a href="#">View</a></li>
+                                                                <li><a href="#">Edit</a></li>
+                                                                <li><a href="#">Remove</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr><!-- tb-tnx-item -->
                                         </tbody>
                                     </table>
                                 </div><!-- .card-inner -->
