@@ -82,7 +82,7 @@
                                         <div class="card-search search-wrap" data-search="search">
                                             <div class="search-content">
                                                 <a href="#" class="search-back btn btn-icon toggle-search" data-target="search"><em class="icon ni ni-arrow-left"></em></a>
-                                                <input type="text" class="form-control form-control-sm border-transparent form-focus-none" placeholder="Pesquisa rápida">
+                                                <input type="text" class="form-control form-control-sm border-transparent form-focus-none" placeholder="Pesquisa r�pida">
                                                 <button class="search-submit btn btn-icon"><em class="icon ni ni-search"></em></button>
                                             </div>
                                         </div><!-- card-search -->
@@ -95,7 +95,7 @@
                                                 <th class="tb-tnx-id"><span class="">Código</span></th>
                                                 <th class="tb-tnx-info">
                                                     <span class="tb-tnx-desc d-none d-sm-inline-block">
-                                                        <span>Usuário</span>
+                                                        <span>Nome</span>
                                                     </span>
                                                 </th>
                                                 <th class="tb-tnx-amount is-alt">
