@@ -28,9 +28,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('roles', function (Blueprint $table) {
-            $table->dropColumn('deleted_at');
-            $table->dropColumn('date_audit');
-        });
+        Schema::dropIfExists('deleted_at');
+        Schema::dropIfExists('date_audit');
     }
 };
