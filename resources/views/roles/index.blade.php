@@ -82,7 +82,7 @@
                                         <div class="card-search search-wrap" data-search="search">
                                             <div class="search-content">
                                                 <a href="#" class="search-back btn btn-icon toggle-search" data-target="search"><em class="icon ni ni-arrow-left"></em></a>
-                                                <input type="text" class="form-control form-control-sm border-transparent form-focus-none" placeholder="Pesquisa rápida">
+                                                <input type="text" class="form-control form-control-sm border-transparent form-focus-none" placeholder="Pesquisa r&aacute;pida">
                                                 <button class="search-submit btn btn-icon"><em class="icon ni ni-search"></em></button>
                                             </div>
                                         </div><!-- card-search -->
@@ -92,7 +92,7 @@
                                     <table class="table table-tranx">
                                         <thead>
                                             <tr class="tb-tnx-head">
-                                                <th class="tb-tnx-id"><span class="">CÃ³digo</span></th>
+                                                <th class="tb-tnx-id"><span class="">Código</span></th>
                                                 <th class="tb-tnx-info">
                                                     <span class="tb-tnx-desc d-none d-sm-inline-block">
                                                         <span>Nome</span>

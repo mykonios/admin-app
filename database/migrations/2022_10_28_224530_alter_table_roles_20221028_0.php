@@ -13,7 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::table('roles', function (Blueprint $table) {
+            $table->integer('user_id')->nullable()->default(null)->comments('Usuário que efetuou a ação')->change();;
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'))->comments('Data exclusão do registro')->after('created_at')->change();
+            $table->timestamp('deleted_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'))->comments('Data exclusão do registro');
+            $table->timestamp('date_audit')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'))->comments('Data verificação da auditoria');
+        });
     }
 
     /**
@@ -23,6 +28,9 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::table('roles', function (Blueprint $table) {
+            $table->dropColumn('deleted_at');
+            $table->dropColumn('date_audit');
+        });
     }
 };
