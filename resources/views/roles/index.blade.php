@@ -131,7 +131,7 @@
                                                                     <li><a href="{{ route('roles.edit',$role->id) }}">Editar</a></li>
                                                                     <li>
                                                                         {!! Form::open(['method' => 'DELETE','route' => ['roles.destroy', $role->id],'style'=>'display:inline']) !!}
-                                                                            {!! Form::submit('Deletar') !!}
+                                                                            {!! Form::submit('Deletar', ['class' => 'btn btn-danger btn-sm']) !!}
                                                                         {!! Form::close() !!}
                                                                     </li>
                                                                 </ul>
