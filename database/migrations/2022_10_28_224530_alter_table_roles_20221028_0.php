@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::table('roles', function (Blueprint $table) {
             $table->integer('status_id')->nullable()->default(null)->comments('Status do Perfil do Usuário')->after('guard_name');
             $table->integer('user_id')->nullable()->default(null)->comments('Usuário que efetuou a ação')->after('status_id');
-            $table->timestamp('updated_at')->nullable()->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'))->comments('Data exclusão do registro')->after('created_at')->change();
             $table->timestamp('deleted_at')->nullable()->default(NULL)->comments('Data exclusão do registro');
             $table->timestamp('date_audit')->nullable()->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'))->comments('Data verificação da auditoria');
         });
@@ -29,6 +28,8 @@ return new class extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('status_id');
+        Schema::dropIfExists('user_id');        
         Schema::dropIfExists('deleted_at');
         Schema::dropIfExists('date_audit');
     }
