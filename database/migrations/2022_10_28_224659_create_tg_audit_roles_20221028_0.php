@@ -13,10 +13,26 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tg_audit_roles_20221028_0', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        DB::unprepared("CREATE TRIGGER tg_audit_roles BEFORE UPDATE ON roles
+          FOR EACH ROW
+        BEGIN
+            IF OLD.date_audit <> NEW.date_audit THEN
+            INSERT INTO 
+              audit_roles
+              (
+                id,
+                name,
+                guard_name,
+                status_id,
+                user_id,
+                created_at,
+                updated_at,
+                deleted_at,
+                date_audit
+              ) 
+                SELECT * FROM roles WHERE id = OLD.id;
+            END IF;    
+        END;");
     }
 
     /**
@@ -26,6 +42,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tg_audit_roles_20221028_0');
+        DB::unprepared('DROP TRIGGER tg_audit_roles');
     }
-};
+}
